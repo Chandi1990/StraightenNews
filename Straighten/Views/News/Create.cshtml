@@ -1,0 +1,73 @@
+﻿@model Straighten.Models.News
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>News</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TitleMain" class="control-label"></label>
+                <input asp-for="TitleMain" class="form-control" />
+                <span asp-validation-for="TitleMain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitleSub1" class="control-label"></label>
+                <input asp-for="TitleSub1" class="form-control" />
+                <span asp-validation-for="TitleSub1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitleSub2" class="control-label"></label>
+                <input asp-for="TitleSub2" class="form-control" />
+                <span asp-validation-for="TitleSub2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descreption" class="control-label"></label>
+                <input asp-for="Descreption" class="form-control" />
+                <span asp-validation-for="Descreption" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Para1" class="control-label"></label>
+                <input asp-for="Para1" class="form-control" />
+                <span asp-validation-for="Para1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Para2" class="control-label"></label>
+                <input asp-for="Para2" class="form-control" />
+                <span asp-validation-for="Para2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image1Url" class="control-label"></label>
+                <input asp-for="Image1Url" class="form-control" />
+                <span asp-validation-for="Image1Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image2Url" class="control-label"></label>
+                <input asp-for="Image2Url" class="form-control" />
+                <span asp-validation-for="Image2Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image3Url" class="control-label"></label>
+                <input asp-for="Image3Url" class="form-control" />
+                <span asp-validation-for="Image3Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
