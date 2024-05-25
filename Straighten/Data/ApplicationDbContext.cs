@@ -12,5 +12,13 @@ namespace Straighten.Data
         }
 
         public DbSet<News> News { get; set; }
+        public DbSet<ImagesUrl> ImagesUrls { get; set; }
+        public DbSet<Paragraph> Paragraphs { get; set; }
+        public DbSet<SubHeading> SubHeadings { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

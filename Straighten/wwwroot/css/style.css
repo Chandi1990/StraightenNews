@@ -612,7 +612,7 @@ input {
   justify-content: space-between;
   border-bottom: 1px solid #d1d8e6;
   padding-bottom: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 0px !important;
 }
 
 .section-title h2 {
