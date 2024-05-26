@@ -5,7 +5,7 @@ EXPOSE 80
 EXPOSE 443
 
 # Copy the SSL certificates
-COPY certs/https
+COPY certs /https
 
 # Use the SDK image to build the application
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
