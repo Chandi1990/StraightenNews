@@ -4,6 +4,5 @@
     {
         public int Id { get; set; }
         public List<string> ParagraphList { get; set; } = new List<string>();
-        public News? News { get; set; }
     }
 }

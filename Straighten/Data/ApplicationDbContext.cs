@@ -16,9 +16,9 @@ namespace Straighten.Data
         public DbSet<Paragraph> Paragraphs { get; set; }
         public DbSet<SubHeading> SubHeadings { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            optionsBuilder.UseSqlite("Data Source=mydb.db");
         }
     }
 }
