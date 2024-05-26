@@ -2,7 +2,6 @@ version: '3.8'
 
 services:
   webapp:
-    image: straighten/straighten:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,9 +9,8 @@ services:
       - "8080:80"
       - "8443:443"
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
     volumes:
-      - .:/app
       - ./certs:/https:ro
     depends_on:
       - db
