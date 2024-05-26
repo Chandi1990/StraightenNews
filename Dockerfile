@@ -16,10 +16,10 @@ WORKDIR "/src/Straighten"
 RUN dotnet build "./Straighten.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 
-RUN dotnet tool install --version 8.0 --global dotnet-ef
-ENV PATH="$PATH:/root/.dotnet/tools"
-ENTRYPOINT dotnet-ef database update
-
+#RUN dotnet tool install --version 8.0 --global dotnet-ef
+#ENV PATH="$PATH:/root/.dotnet/tools"
+#ENTRYPOINT dotnet-ef database update
+#
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
