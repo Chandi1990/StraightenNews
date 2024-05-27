@@ -1,8 +1,8 @@
 # Use the official ASP.NET Core runtime as a parent image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 8080
+EXPOSE 8081
 
 # Use the SDK image to build the application
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
@@ -14,7 +14,6 @@ COPY . .
 WORKDIR "/src/Straighten"
 RUN dotnet build "./Straighten.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-Run dotnet-ef database update
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
