@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-Straighten-538fd307-75ca-4895-bf48-422141d07358</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <Configurations>Debug;Release;Lankahost</Configurations>
+    <Configurations>Debug;Release</Configurations>
     <StartupObject></StartupObject>
     <ApplicationIcon>wwwroot\favicon.ico</ApplicationIcon>
   </PropertyGroup>
@@ -32,6 +32,7 @@
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
     <Folder Include="Migrations\" />
+    
   </ItemGroup>
 
   <ItemGroup>
